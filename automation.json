@@ -2,7 +2,21 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "VMName":{
+        "Type": "String"
         
+    },
+        "VirtualMachineSize": {
+          "type": "String",
+            "allowedValues": ["Standard_B1s","Standard_B1ms"]
+    },
+    "StorageAccountName":{
+        "type": "string",
+        "maxLength" : 24,
+        "minLength" : 5,
+        "defaultValue": "Automation1b7b"
+    }
+
     },
     "functions": [],
     "variables": {},
